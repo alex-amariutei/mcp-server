@@ -9,4 +9,6 @@ class VendorService(
     private val vendorRepository: VendorRepository,
 ) {
     fun get(id: Long): Vendor? = vendorRepository.findById(id)
+
+    fun getByName(name: String): Vendor? = vendorRepository.findByName(name)
 }

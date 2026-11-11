@@ -9,4 +9,7 @@ class TransactionService(
     private val transactionRepository: TransactionRepository,
 ) {
     fun get(id: Long): Transaction? = transactionRepository.findById(id)
+
+    fun getAllForUser(userId: Long): List<Transaction> =
+        transactionRepository.findAllByUserId(userId)
 }

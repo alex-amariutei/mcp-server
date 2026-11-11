@@ -9,4 +9,6 @@ class TagService(
     private val tagRepository: TagRepository,
 ) {
     fun get(id: Long): Tag? = tagRepository.findById(id)
+
+    fun getByName(name: String): Tag? = tagRepository.findByName(name)
 }

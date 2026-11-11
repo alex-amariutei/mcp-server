@@ -9,4 +9,7 @@ class UserService(
     private val userRepository: UserRepository,
 ) {
     fun get(id: Long): User? = userRepository.findById(id)
+
+    fun getByFirstNameAndLastName(firstName: String, lastName: String): User? =
+        userRepository.findByFirstNameAndLastName(firstName, lastName)
 }
